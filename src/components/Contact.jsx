@@ -16,7 +16,7 @@ export default function Contact() {
     setStatus('loading');
     setErrorMsg('');
     try {
-      const res = await axios.post(`${API_URL}/api/contact`, form);
+      const res = await axios.post(`${API_URL}/api/contact`, form, { timeout: 60000 });
       if (res.data.success) {
         setStatus('success');
         setForm({ name: '', email: '', subject: '', message: '' });
@@ -127,3 +127,4 @@ export default function Contact() {
     </section>
   );
 }
+
