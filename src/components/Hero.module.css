@@ -1,0 +1,102 @@
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding-top: 8rem !important;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+  opacity: 0; animation: fadeUp 0.8s 0.3s forwards;
+}
+.tag::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
+
+.name {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lastName { color: var(--text); }
+
+.role {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0; animation: fadeUp 0.8s 0.7s forwards;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  min-height: 2.5rem;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.desc {
+  max-width: 560px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+  opacity: 0; animation: fadeUp 0.8s 0.9s forwards;
+  margin-bottom: 3rem;
+}
+
+.btns {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.8s 1.1s forwards;
+}
+
+.stats {
+  display: flex; gap: 3rem; margin-top: 4rem;
+  opacity: 0; animation: fadeUp 0.8s 1.3s forwards;
+}
+
+.statNum {
+  font-size: 2.5rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.statLabel {
+  font-size: 0.8rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.2rem;
+}
+
+.scroll {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: 0.7rem;
+  color: var(--muted); letter-spacing: 0.1em;
+  opacity: 0; animation: fadeUp 0.8s 1.6s forwards;
+}
+.scrollLine {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollDrop 1.5s ease-in-out infinite;
+}
+@keyframes scrollDrop {
+  0%,100% { transform: scaleY(1); opacity: 1; }
+  50% { transform: scaleY(0.5); opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .stats { gap: 1.5rem; }
+  .scroll { display: none; }
+}
