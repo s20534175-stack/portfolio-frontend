@@ -6,7 +6,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <p>
           Designed & Built by{' '}
-          <span className={styles.name}>Santhosh Balasubramani</span>
+          <span className={styles.name}>Santhosh B</span>
           {' '}· Chennai, India · 2026
         </p>
         <div className={styles.links}>
