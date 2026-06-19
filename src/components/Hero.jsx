@@ -38,7 +38,7 @@ export default function Hero() {
         <h1 className={styles.name}>
           Hi, I'm<br />
           <span className={styles.highlight}>Santhosh</span><br />
-          <span className={styles.lastName}>Balasubramani</span>
+          <span className={styles.lastName}>B</span>
         </h1>
         <div className={styles.role}>
           <span>{displayed}</span>
