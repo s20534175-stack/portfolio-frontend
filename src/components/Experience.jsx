@@ -9,25 +9,23 @@ export default function Experience() {
         <div className={`${styles.card} reveal`}>
           <div className={styles.header}>
             <div>
-              <div className={styles.role}>Robotics & Automation Intern</div>
-              <div className={styles.company}>Kodacy — Remote, India</div>
+              <div className={styles.role}>MERN Stack Intern</div>
+              <div className={styles.company}>Suven Consultants & Technology Pvt. Ltd. — Remote, India</div>
             </div>
-            <div className={styles.date}>Dec 2023 — Jan 2024</div>
+            <div className={styles.date}>Sep 2024 — Oct 2024</div>
           </div>
           <ul className={styles.list}>
-            <li>Developed and tested <strong>3 robotics prototypes</strong> using Arduino and ESP32 microcontrollers, improving project delivery efficiency by <strong>25%</strong> through systematic testing protocols.</li>
-            <li>Applied Python and Embedded C to <strong>automate 5+ repetitive tasks</strong> in sensor data collection and motor control, reducing manual processing time by <strong>40%</strong>.</li>
-            <li>Collaborated with a cross-functional team of 4 engineers to deliver 3 project modules ahead of schedule using IoT-based real-time monitoring and control solutions.</li>
-            <li>Implemented <strong>wireless communication protocols</strong> (Bluetooth, GSM) and contributed to 2 successful proof-of-concept demonstrations in embedded systems and automation.</li>
+            <li>Built and deployed full-stack application modules using <strong>React, Node.js, Express, and MongoDB</strong> as part of a structured 4-week MERN internship program.</li>
+            <li>Developed <strong>REST APIs</strong> with Express.js, performed CRUD operations with MongoDB, and implemented client-server communication patterns.</li>
+            <li>Built reusable <strong>React components</strong> for frontend interfaces and integrated them with backend APIs.</li>
           </ul>
           <div className={styles.tags}>
-            <span className="tag">Arduino</span>
-            <span className="tag">ESP32</span>
-            <span className="tag">Python</span>
-            <span className="tag">Embedded C</span>
-            <span className="tag">Bluetooth</span>
-            <span className="tag">GSM</span>
-            <span className="tag">IoT</span>
+            <span className="tag">React.js</span>
+            <span className="tag">Node.js</span>
+            <span className="tag">Express.js</span>
+            <span className="tag">MongoDB</span>
+            <span className="tag">REST API</span>
+            <span className="tag">JWT</span>
           </div>
         </div>
       </div>
