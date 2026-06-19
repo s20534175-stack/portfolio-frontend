@@ -47,7 +47,7 @@ export default function Hero() {
         <p className={styles.desc}>
           B.E. Robotics & Automation graduate building production-ready full-stack web apps.
           Specialized in React.js, Node.js, MongoDB, and AI/ML API integration.
-          Shipped 4 real projects. Based in Chennai, India.
+          Shipped 3 real projects. Based in Chennai, India.
         </p>
         <div className={styles.btns}>
           <a href="#projects" className="btn btn-primary">View Projects ↗</a>
@@ -55,11 +55,11 @@ export default function Hero() {
         </div>
         <div className={styles.stats}>
           <div>
-            <div className={styles.statNum}>4+</div>
+            <div className={styles.statNum}>3</div>
             <div className={styles.statLabel}>Projects Shipped</div>
           </div>
           <div>
-            <div className={styles.statNum}>8.70</div>
+            <div className={styles.statNum}>8.86</div>
             <div className={styles.statLabel}>CGPA / 10</div>
           </div>
           <div>
