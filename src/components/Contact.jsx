@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
 
 const SERVICE_ID = 'service_tri3w4b';
-const TEMPLATE_ID = 'j4p5hfq';
+const TEMPLATE_ID = 'template_awnnjrc';
 const PUBLIC_KEY = 'EHl5vZOFboURRbuOK';
 
 export default function Contact() {
