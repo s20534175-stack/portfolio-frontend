@@ -1,33 +1,32 @@
 import { useState } from 'react';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const SERVICE_ID = 'service_tri3w4b';
+const TEMPLATE_ID = 'j4p5hfq';
+const PUBLIC_KEY = 'EHl5vZOFboURRbuOK';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState(null); // 'loading' | 'success' | 'error'
-  const [errorMsg, setErrorMsg] = useState('');
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    setErrorMsg('');
     try {
-      const res = await axios.post(`${API_URL}/api/contact`, form, { timeout: 60000 });
-      if (res.data.success) {
-        setStatus('success');
-        setForm({ name: '', email: '', subject: '', message: '' });
-      }
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      }, PUBLIC_KEY);
+      setStatus('success');
+      setForm({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
+      console.error(err);
       setStatus('error');
-      setErrorMsg(
-        err.response?.data?.message ||
-        err.response?.data?.errors?.[0]?.msg ||
-        'Something went wrong. Please try again.'
-      );
     }
   };
 
@@ -109,13 +108,13 @@ export default function Contact() {
                   />
                 </div>
                 {status === 'error' && (
-                  <div className={styles.error}>⚠️ {errorMsg}</div>
+                  <div className={styles.error}>⚠️ Something went wrong. Please try again.</div>
                 )}
                 <button
                   type="submit"
                   className="btn btn-primary"
                   disabled={status === 'loading'}
-                  style={{width:'100%', justifyContent:'center', cursor: status === 'loading' ? 'wait' : 'none'}}
+                  style={{width:'100%', justifyContent:'center'}}
                 >
                   {status === 'loading' ? 'Sending...' : 'Send Message ↗'}
                 </button>
@@ -127,4 +126,3 @@ export default function Contact() {
     </section>
   );
 }
-
