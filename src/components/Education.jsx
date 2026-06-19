@@ -1,12 +1,11 @@
 import styles from './Education.module.css';
-
 const edu = [
   {
     degree: 'B.E. Robotics & Automation',
     school: 'Rajalakshmi Engineering College',
     year: '2022 — 2026',
     meta: 'Anna University Affiliated',
-    score: 'GPA: 8.70 / 10.0',
+    score: 'GPA: 8.86 / 10.0',
     highlight: 'Top 10% of Class · Third Place i\'Quest\'25',
     icon: '🎓',
   },
@@ -27,7 +26,6 @@ const edu = [
     icon: '🏫',
   },
 ];
-
 export default function Education() {
   return (
     <section id="education">
